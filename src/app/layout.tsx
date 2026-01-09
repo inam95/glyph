@@ -30,6 +30,14 @@ export const metadata: Metadata = {
   title: "Glyph",
 };
 
+/**
+ * Root layout component that wraps the application with authentication and theming providers and renders the page content.
+ *
+ * Wraps children with ClerkProvider (using the dark appearance theme) and the application's ThemeProvider, and renders a header containing sign-in / sign-up controls when signed out and a user menu when signed in.
+ *
+ * @param children - The page or application content to render inside the layout
+ * @returns The composed root layout element containing providers, header, and the provided children
+ */
 export default function RootLayout({
   children,
 }: Readonly<{
